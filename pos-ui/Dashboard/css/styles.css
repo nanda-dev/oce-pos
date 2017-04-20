@@ -37,9 +37,14 @@ body {
 	float: left;
 }
 
-//.form-control{
-	//margin-left: 37px;
-//}
+#searchForId{
+	width: 75%;
+}
+
+#searchById{
+	width: 75%;
+}
+
 .form-control{
 	float:left;
 	width:20%;
@@ -70,9 +75,6 @@ clear:both;
     width: 80px;
 }
 
-//.search-list1.list-group li:hover{
-// background-color: #d5eaf5;
-//}
 
 .list-customer{
     float: left;
