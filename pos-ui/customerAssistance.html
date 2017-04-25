@@ -16,81 +16,29 @@
 
 		/* Write custom styles here*/
 		
-		.search-list.list-group li.list-group-item.selected,
-		.search-list.list-group li.list-group-item:hover {
-			background-color: #d9edf7;
+		
+		
+		.verification strong{
+			font-size: initial;
 		}
 		
-		.form-group {
+		.expiration-date .field {
 			float: left;
-			margin-right: 5px;
+			width: 90px;
+			margin-right: 20px;
 		}
 		
-		#searchByname {
-			float: left;
-			width: 20%;
+		.expiration-date .no-exp {
+			display: inline-block;
+			margin-top: 6px;
 		}
 		
-		.code {
-			float: left;
-		}
 		
-		.action {
-			float: left;
+		.border{
+			border-width: 2px;
+            border-color: green;
 		}
-		
-		#searchForId {
-			width: 75%;
-		}
-		
-		#searchById {
-			width: 75%;
-		}
-		
-		.form-control {
-			float: left;
-			width: 20%;
-			margin-left: 10px;
-		}
-		
-		.float {
-			float: left;
-		}
-		
-		.clearFloat {
-			clear: both;
-		}
-		
-		.underline {
-			border-bottom: 2px solid #1cbb1c;
-			padding-bottom: 20px;
-			margin-bottom: 20px;
-		}
-		
-		.authenticate {
-			margin-right: 1em;
-		}
-		
-		#searchBymonth {
-			clear: both;
-			clear: both;
-			margin-top: 20px;
-			margin-left: 109px;
-			width: 80px;
-		}
-		
-		.list-customer {
-			float: left;
-			height: 105px;
-		}
-		
-		.list {
-			float: left;
-		}
-		
-		.pad {
-			padding-left: 27px;
-		}
+			
 	</style>
 </head>
 
@@ -120,33 +68,40 @@
 	</nav>
 
 	<div class="container main-content">
-		<div class="panel panel-primary">
+	
+		<div class="panel panel-primary cust-panel">
 			<div class="panel-heading">
 				<h3 class="panel-title">Customer Assistance</h3>
 			</div>
-			<div class="panel-body">
-				<form>
-					<div class="verification">
-						<strong class="text-primary" style="font-size: initial">Customer Verification</strong>
+			<div class="panel-body verification">
+						
+						<strong class="text-primary">Customer Verification</strong>
 						<br><br>
 						<div>Account Holder: JOHN DOE</div><br>
-						<div class="inputs">
-							<label class="authenticate" style="float:left;">Method of Authentication:</label>
+						
+						
+						<form class="form-horizontal">
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-5 col-md-4 col-lg-3 control-label">Method of Authentication:</label>
+						<div class="col-sm-6 col-md-3 custom-radio">
+						<label class="radio-inline">
+						<input type="radio" value="option1" name="optradio">Passcode
+						</label>
+						<label class="radio-inline">
+						<input type="radio" value="option2" name="optradio">Photo ID
+						</label>
 						</div>
-						<div class="sd" style="float:left;">
-							<input type="radio" name="optradio" /> Passcode &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<input type="radio" name="optradio" /> Photo ID
 						</div>
-
-						<div class="passcode">
-							<br><br>
-							<label class="code">passcode:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<input type="text" class="form-control" style="margin-left :38px">
+						<div class="form-group">
+						<label for="inputPassword3" class="col-sm-5 col-md-4 col-lg-3 control-label" for="inputPassword3">Passcode:</label>
+						<div class="col-sm-6 col-md-3">
+						<input type="password" class="form-control" id="inputPassword3">
 						</div>
-						<br>
-						<br>
-						<div class="underline"> <label class="float">Photo Id Type:</label>
-							<select class="form-control" id="searchByname">
+						</div>
+						<div class="form-group">
+						<label for="inputPassword13" class="col-sm-5 col-md-4 col-lg-3 control-label" for="searchByname">Photo ID Type:</label>
+						<div class="col-sm-6 col-md-3">
+						<select class="form-control" id="inputPassword13">
 								<option>Driver’s License</option>
 								<option>Passport</option>
 								<option>IFE/INE</option>
@@ -156,8 +111,13 @@
 								<option>View Bill</option>
 								<option>Renewal of Contract</option>
 							</select>
-
-							<select class="form-control" id="searchBymonth">
+						</div>
+						</div>
+						
+						<div class="form-group">
+						<div class="col-sm-offset-3 col-sm-6 expiration-date">
+						<div class="field">
+						<select class="form-control" id="searchBymonth">
 								<option>-mm-</option>
 								<option>01</option>
 								<option>02</option>
@@ -172,21 +132,32 @@
 								<option>11</option>
 								<option>12</option>
 							</select>
-
-							<input type="text" class="form-control" placeholder="yyyy" style="margin-top: 20px;width: 70px; margin-left: 22px;">
-
-							<input type="checkbox" class="form-control" style="margin-top: 19px; width: 19px; margin-left: 64px;">
-
-							<div class="padding" style="padding-top: 59px;">No expiration date</div>
-							<div class="clearFloat"></div>
 						</div>
-
-
-						<strong class="text-primary" style="font-size: initial">Quick Action</strong>
+						<div class="field">
+						<input type="text" class="form-control" placeholder="yyyy">
+						</div>
+						
+						<div class="no-exp">
+								<label>
+								  <input type="checkbox"> No expiration date
+								</label>
+							  </div>
+						
+						
+						</div>
+						</div>
+						<hr class="border">
+						
+						
+						<strong class="text-primary">Quick Action</strong>
 						<br>
 						<br/>
-						<label class="action">Where do you want to go first? </label>
-						<select class="form-control" id="searchById" style="width: 18%">
+						<div class="form-group">
+						<label for="input" class="col-sm-5 col-md-4 col-lg-3 control-label">Where do you want to go first? </label>
+						<div class="col-sm-6 col-md-3">
+						
+						
+						<select class="form-control" id="input">
 							<option>Customer Summary</option>
 							<option>SIM/IMEI</option>
 							<option>Pay Bill</option>
@@ -197,7 +168,10 @@
 							<option>Renewal of Contract</option>
 						</select>
 					</div>
-				</form>
+						</div>
+				
+
+						</form>
 
 			</div>
 		</div>
