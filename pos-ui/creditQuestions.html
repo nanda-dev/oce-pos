@@ -20,18 +20,21 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   <style>
-    .question-info {
-      padding: 10px;
-      padding-left: 30px;
-    }
-
     .reqd-info {
       text-align: right;
       padding-right: 5px;
     }
 
     .card-number {
-      max-width: 250px;
+      max-width: 100px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question label {
+      font-weight: normal;
     }
   </style>
 </head>
@@ -60,58 +63,83 @@
       <!--/.nav-collapse -->
     </div>
   </nav>
-  <div class="errorMsg">Please answer all of the questions before continuing.</div>
   <div class="container main-content ">
+    <div class="validation-error hidden">Please answer all of the questions before continuing.</div>
     <div class="row">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Credit Questions</h3>
         </div>
-        <div class="reqd-info"><small>*Required fields</small></div>
-        <div class="question-info">
-          <p class="credit-text"><small>Ask the customer this series of questions so credit eligibility can be verified:</small></p>
-          <div class="question1">
-            <p>1. Today being
-              <current date dd/mm/yyyy> do you authorize ‘COMUNICACIONES NewCo DE MEXICO S.A. DE C.V.’ (NewCo company name) to consult your credit
-                history for just this time before the ‘Sociedades de Informacion Crediticia’ that deem convenient, declaring
-                that you know the nature, reach and use that ‘COMUNICACIONES NewCo DE MEXICO S.A. DE C.V.’ will have with
-                such information??</p>
-          </div>
+        <div class="panel-body">
+          <form class="form-inline">
+            <div class="reqd-info text-danger"><small>*Required fields</small></div>
+            <p class="text-info">Ask the customer this series of questions so credit eligibility can be verified:</p>
+            <div class="question">
+              <p>1. Today being
+                <current date dd/mm/yyyy> do you authorize ‘COMUNICACIONES NewCo DE MEXICO S.A. DE C.V.’ (NewCo company name) to consult your credit
+                  history for just this time before the ‘Sociedades de Informacion Crediticia’ that deem convenient, declaring
+                  that you know the nature, reach and use that ‘COMUNICACIONES NewCo DE MEXICO S.A. DE C.V.’ will have with
+                  such information??</p>
+              <label class="radio-inline">
+              <input type="radio" name="question1" value="yes"> Yes
+            </label>
+              <label class="radio-inline">
+              <input type="radio" name="question1" value="no"> No
+            </label>
 
-          <div class="consent-error">
-            <strong>Consent is required to proceed. You will not be able to continue…..</strong>
-          </div>
+            </div>
 
-          <div class="question2">
-            <p>2. Will you provide an authorization signature?</p>
-          </div>
+            <div class="question">
+              <p>2. Will you provide an authorization signature?</p>
+              <label class="radio-inline">
+              <input type="radio" name="question2" value="yes"> Yes
+            </label>
+              <label class="radio-inline">
+              <input type="radio" name="question2" value="no"> No
+            </label>
+            </div>
 
-          <div class="auth-error">
-            <strong>Authorization is required to proceed. You will not be able to continue…..</strong>
-          </div>
+            <div class="question">
+              <p>3. Do you have a credit card?</p>
 
-          <div class="question3">
-            <p>3. Do you have a credit card?</p>
-          </div>
+              <label class="radio-inline">
+                <input type="radio" name="question3" value="yes" checked> Yes
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="question3" value="no"> No
+              </label>
+              <br>
+              <div class="form-group">
+                <label for="exampleInputName2">Last 4 digits of credit card *</label>
+                <input type="text" class="form-control card-number" id="exampleInputName2" placeholder="----" maxlength="4">
+              </div>
+            </div>
 
-          <div>
-            <p>*Last 4 digits of credit card</p>
-            <input type="text" class="form-control card-number" id="cardNum" placeholder="----">
-          </div>
+            <div class="question">
+              <p>4. Do you have a mortgage?</p>
+              <label class="radio-inline">
+              <input type="radio" name="question4" value="yes"> Yes
+            </label>
+              <label class="radio-inline">
+              <input type="radio" name="question4" value="no"> No
+            </label>
+            </div>
 
-          <div class="question4">
-            <p>4. Do you have a mortgage?</p>
-          </div>
+            <div class="question">
+              <p>5. Do/Did you have a car loan in the past 24 months?</p>
+              <label class="radio-inline">
+              <input type="radio" name="question5" value="yes"> Yes
+            </label>
+              <label class="radio-inline">
+              <input type="radio" name="question5" value="no"> No
+            </label>
+            </div>
 
-          <div class="question5">
-            <p>5. Do/Did you have a car loan in the past 24 months?</p>
-          </div>
-
-
-          <div class="options">
-            <input type="radio" name="response" value="Yes"> Yes &nbsp;
-            <input type="radio" name="response" value="No"> No
-          </div>
+            <div class="error-msg hidden">
+              <strong>Consent is required to proceed. You will not be able to continue…..</strong>
+              <strong>Authorization is required to proceed. You will not be able to continue…..</strong>
+            </div>
+          </form>
         </div>
       </div>
       <div class="clearfix text-right">
