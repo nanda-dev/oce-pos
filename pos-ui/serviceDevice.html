@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Omni Channel Experience Lab</title>
+
+	<!-- Bootstrap -->
+	<link href="css/libs/bootstrap.min.css" rel="stylesheet">
+	<link href="css/libs/font-awesome.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+
+	<style>
+		/* Write custom styles here*/
+
+		.underline {
+			border-bottom: 2px solid #1cbb1c;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+
+		.mobile-panel .form-group label {
+			font-weight: normal;
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+				  aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+				<a class="navbar-brand" href="index.html">Omni Channel Lab</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart (0)</a></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container main-content">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">New Activation - Service & Device</h3>
+			</div>
+			<div class="panel-body">
+				<p>
+					<strong class="text-primary">Account Type:</strong>
+					<span>Residential Post Paid</span>
+				</p>
+				<p>
+					<strong class="text-primary">Number of Lines:</strong>
+					<span>3</span>
+				</p>
+			</div>
+		</div>
+
+
+		<div class="panel panel-primary mobile-panel">
+			<div class="panel-heading">
+				<h3 class="panel-title">Select Mobile Number</h3>
+			</div>
+			<div class="panel-body">
+				<form>
+					<div class="underline">
+						<span>1. Does the customer want to port-in a number? * </span>
+						<label class="radio-inline">
+							<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+						</label>
+					</div>
+					<div class="underline">
+						<div class="row">
+							<div class="col-md-2 col-xs-3">
+								<div class="radio">Mobile Number Type:</div>
+							</div>
+							<div class="col-md-3 col-xs-8">
+								<div class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											Display Available CPP Numbers
+										</label>
+								</div>
+								<div class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+											Display Available MPP Numbers
+										</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="underline">
+						<div class="form-group clearfix">
+							<label>2. Choose Available Number *</label>
+							<div class="col-xs-6 col-md-5 col-lg-5">
+								<select class="form-control" id="searchById">
+                  <option>(xxx) xxx-xxxx</option>
+                  <option>4363474774</option>
+                  <option>4363474775</option>
+                  <option>4363474776</option>
+				  				<option>4363474777</option>
+              	</select>
+							</div>
+						</div>
+						<div class="form-group clearfix">
+							<div class="col-md-5 col-lg-5">
+								<button type="submit" class="btn btn-primary">Reserve Number</button>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<strong class="text-primary" style="font-size: initial">Device Information</strong>
+						<div class="form-group">
+							<div class="radio">
+								<label>
+									<input type="radio" name="optradio" id="optradio" value=""> Purchase from AT&T
+  							</label>
+							</div>
+							<div class="col-xs-6 col-md-5 col-lg-5">
+								<select class="form-control" id="searchById">
+									<option>-Select One-</option>
+									<option>iPhone 6s</option>
+									<option>Samsung s4</option>                  
+								</select>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+
+						<div class="radio">
+							<label>
+									<input type="radio" name="optradio1" id="optradio1" value=""> Bring Your Own Device
+  							</label>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+		<div class="text-right">
+			<a type="button" class="btn btn-default" role="button" href="dashboard.html">Cancel</a>
+			<a type="button" class="btn btn-info" role="button" href="creditCheck.html"><i class="fa fa-chevron-left"></i> Previous</a>
+			<a type="button" class="btn btn-primary" role="button" href="selectPlanFeatures.html">Next <i class="fa fa-chevron-right"></i></a>
+		</div>
+	</div>
+
+	<!-- /.container -->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
