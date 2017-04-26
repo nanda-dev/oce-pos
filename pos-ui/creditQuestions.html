@@ -20,11 +20,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   <style>
-    .reqd-info {
-      text-align: right;
-      padding-right: 5px;
-    }
-
     .card-number {
       max-width: 100px;
     }
@@ -65,91 +60,85 @@
   </nav>
   <div class="container main-content ">
     <div class="validation-error hidden">Please answer all of the questions before continuing.</div>
-    <div class="row">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Credit Questions</h3>
-        </div>
-        <div class="panel-body">
-          <form class="form-inline">
-            <div class="reqd-info text-danger"><small>*Required fields</small></div>
-            <p class="text-info">Ask the customer this series of questions so credit eligibility can be verified:</p>
-            <div class="question">
-              <p>1. Today being
-                <current date dd/mm/yyyy> do you authorize ‘COMUNICACIONES NewCo DE MEXICO S.A. DE C.V.’ (NewCo company name) to consult your credit
-                  history for just this time before the ‘Sociedades de Informacion Crediticia’ that deem convenient, declaring
-                  that you know the nature, reach and use that ‘COMUNICACIONES NewCo DE MEXICO S.A. DE C.V.’ will have with
-                  such information??</p>
-              <label class="radio-inline">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Credit Questions</h3>
+      </div>
+      <div class="panel-body">
+        <form class="form-inline">
+          <p class="text-info">Ask the customer this series of questions so credit eligibility can be verified:</p>
+          <div class="question">
+            <p>1. Today being
+              <current date dd/mm/yyyy> do you authorize ‘COMUNICACIONES NewCo DE MEXICO S.A. DE C.V.’ (NewCo company name) to consult your credit
+                history for just this time before the ‘Sociedades de Informacion Crediticia’ that deem convenient, declaring
+                that you know the nature, reach and use that ‘COMUNICACIONES NewCo DE MEXICO S.A. DE C.V.’ will have with
+                such information??</p>
+            <label class="radio-inline">
               <input type="radio" name="question1" value="yes"> Yes
             </label>
-              <label class="radio-inline">
+            <label class="radio-inline">
               <input type="radio" name="question1" value="no"> No
             </label>
 
-            </div>
+          </div>
 
-            <div class="question">
-              <p>2. Will you provide an authorization signature?</p>
-              <label class="radio-inline">
+          <div class="question">
+            <p>2. Will you provide an authorization signature?</p>
+            <label class="radio-inline">
               <input type="radio" name="question2" value="yes"> Yes
             </label>
-              <label class="radio-inline">
+            <label class="radio-inline">
               <input type="radio" name="question2" value="no"> No
             </label>
-            </div>
+          </div>
 
-            <div class="question">
-              <p>3. Do you have a credit card?</p>
+          <div class="question">
+            <p>3. Do you have a credit card?</p>
 
-              <label class="radio-inline">
+            <label class="radio-inline">
                 <input type="radio" name="question3" value="yes" checked> Yes
               </label>
-              <label class="radio-inline">
+            <label class="radio-inline">
                 <input type="radio" name="question3" value="no"> No
               </label>
-              <br>
-              <div class="form-group">
-                <label for="exampleInputName2">Last 4 digits of credit card *</label>
-                <input type="text" class="form-control card-number" id="exampleInputName2" placeholder="----" maxlength="4">
-              </div>
+            <br>
+            <div class="form-group">
+              <label for="exampleInputName2">Last 4 digits of credit card *</label>
+              <input type="text" class="form-control card-number" id="exampleInputName2" placeholder="----" maxlength="4">
             </div>
+          </div>
 
-            <div class="question">
-              <p>4. Do you have a mortgage?</p>
-              <label class="radio-inline">
+          <div class="question">
+            <p>4. Do you have a mortgage?</p>
+            <label class="radio-inline">
               <input type="radio" name="question4" value="yes"> Yes
             </label>
-              <label class="radio-inline">
+            <label class="radio-inline">
               <input type="radio" name="question4" value="no"> No
             </label>
-            </div>
+          </div>
 
-            <div class="question">
-              <p>5. Do/Did you have a car loan in the past 24 months?</p>
-              <label class="radio-inline">
+          <div class="question">
+            <p>5. Do/Did you have a car loan in the past 24 months?</p>
+            <label class="radio-inline">
               <input type="radio" name="question5" value="yes"> Yes
             </label>
-              <label class="radio-inline">
+            <label class="radio-inline">
               <input type="radio" name="question5" value="no"> No
             </label>
-            </div>
+          </div>
 
-            <div class="error-msg hidden">
-              <strong>Consent is required to proceed. You will not be able to continue…..</strong>
-              <strong>Authorization is required to proceed. You will not be able to continue…..</strong>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="clearfix text-right">
-        <button class="btn btn-default" type="button" ng-disabled="vm.form.$pristine" ng-click="vm.cancel()">
-		  <span class="glyphicon glyphicon-remove"></span> Close </button>
-        <button class="btn btn-primary" type="submit" ng-click="vm.submitForm()" disabled>
-   	      <span class="glyphicon glyphicon-menu-right"></span> Continue </button>
+          <div class="error-msg hidden">
+            <strong>Consent is required to proceed. You will not be able to continue…..</strong>
+            <strong>Authorization is required to proceed. You will not be able to continue…..</strong>
+          </div>
+        </form>
       </div>
     </div>
-
+    <div class="clearfix text-right">
+      <a href="#" class="btn btn-default" type="button"><i class="fa fa-chevron-left"></i> Back </a>
+      <a href="uploadDocuments.html" class="btn btn-primary" type="submit">Next <i class="fa fa-chevron-right"></i></a>
+    </div>
   </div>
   <!-- /.container -->
 

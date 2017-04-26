@@ -20,9 +20,19 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   <style>
+    .credit-icon {
+      display: inline-block;
+      font-size: 30px;
+      padding: 0 10px;
+    }
+
+    .credit-icon i {
+      position: relative;
+      top: -5px;
+    }
+
     .credit-check {
-      padding: 10px;
-      padding-left: 30px;
+      display: inline-block;
     }
   </style>
 </head>
@@ -57,26 +67,21 @@
         <div class="panel-heading">
           <h3 class="panel-title">Credit Check</h3>
         </div>
-
-        <div class="credit-check">
-          <div class="generic-message">
-            <p>Credit results cannot be determined at this time.</p>
+        <div class="panel-body">
+          <div class="credit-icon text-info">
+            <i class="fa fa-exclamation-circle"></i>
           </div>
-          <div class="specific-message">
-          </div>
+          <div class="credit-check">
+            <strong class="text-info">Credit results cannot be determined at this time.</strong>
+            <p class="hidden">The credit check is pending additional information.</p>
+            <p>To determine what action is required, please check the Order Actions page.</p>
 
-          <div>
-            <p>The credit check is pending additional information.
-              </br>To determine what action is required, please check the Order Actions page.</p>
           </div>
         </div>
-
       </div>
       <div class="clearfix text-right">
-        <button class="btn btn-primary" type="button" ng-disabled="vm.form.$pristine" ng-click="vm.cancel()">
-		    Order Actions </button>
-        <button class="btn btn-primary" type="submit" ng-click="vm.submitForm()">
-   	    Done </button>
+        <button class="btn btn-primary" type="button"> Order Actions </button>
+        <button class="btn btn-primary" type="submit"> Done </button>
       </div>
     </div>
 

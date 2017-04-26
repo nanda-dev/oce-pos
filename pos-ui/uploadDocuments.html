@@ -20,18 +20,19 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   <style>
+    .upload-docs-table td {
+      vertical-align: middle !important;
+    }
+
     .upload-docs-table .btn-link {
       padding: 0;
       font-size: 25px;
     }
 
     .address-proof-list {
-      max-width: 250px;
-    }
-
-    .upload-info {
-      float: right;
-      padding: 10px;
+      width: 200px;
+      display: inline-block;
+      margin-left: 10px;
     }
 
     .recommended-doc {
@@ -81,25 +82,25 @@
   </nav>
 
   <div class="container main-content ">
-    <div>Credit Check Status: Documents for Verification Required </div>
-    <div>Account Number: 123456789 </div>
-    <div class="row">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">Upload Documents</h3>
-        </div>
-        <div class="upload-info">
-          <i class="fa fa-asterisk necessary-doc" aria-hidden="true"></i> - Necessary document &nbsp;
-          <i class="fa fa-dot-circle-o recommended-doc" aria-hidden="true"></i> - Recommended document
-        </div>
-        <input id="file-input" type="file" style="display:none;" />
-        <table class="table upload-docs-table table-striped table-hover">
-          <tr class="info">
+    <div class="text-right mb-10">
+      <i class="fa fa-asterisk necessary-doc" aria-hidden="true"></i> - Necessary document &nbsp;
+      <i class="fa fa-dot-circle-o recommended-doc" aria-hidden="true"></i> - Recommended document
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Upload Documents</h3>
+      </div>
+      <input id="file-input" type="file" class="hidden" />
+      <table class="table upload-docs-table table-striped table-hover">
+        <thead>
+          <tr>
             <th width="10%"> </th>
             <th width="50%">Document Type</th>
             <th width="10%" colspan="2" class="text-center">Actions</th>
             <th width="30%" class="text-center">Status</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <td class="text-center"></td>
             <td>01 Contract</td>
@@ -120,8 +121,6 @@
             </td>
             <td>
               <div class="upload-success"><i class="fa fa-check-square" aria-hidden="true"></i> Uploaded</div>
-              <div class="upload-fail"><i class="fa fa-window-close" aria-hidden="true"></i> Capture/upload failed. Please retry.
-              </div>
             </td>
           </tr>
           <tr>
@@ -131,10 +130,9 @@
             <td>03 Address Proof
               <div class="address-proof-list">
                 <select class="form-control" id="searchById">
-                          <option>Passport</option>
-                        </select>
+                  <option>Passport</option>
+                </select>
               </div>
-              <small>* Proof of Address</small>
             </td>
             <td></td>
             <td>
@@ -142,7 +140,9 @@
                 <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
               </button>
             </td>
-            <td></td>
+            <td>
+              <div class="upload-fail"><i class="fa fa-window-close" aria-hidden="true"></i> Capture/upload failed. Please retry.</div>
+            </td>
           </tr>
           <tr>
             <td class="text-center">
@@ -270,17 +270,14 @@
             </td>
             <td></td>
           </tr>
-        </table>
+        </tbody>
+      </table>
 
-      </div>
-      <div class="clearfix text-right">
-        <button class="btn btn-default" type="button" ng-disabled="vm.form.$pristine" ng-click="vm.cancel()">
-		  <span class="glyphicon glyphicon-remove"></span> Cancel </button>
-        <button class="btn btn-primary" type="submit" ng-click="alert()">
-   	      <span class="glyphicon glyphicon glyphicon-ok"></span> Done </button>
-      </div>
     </div>
-
+    <div class="clearfix text-right">
+      <a href="creditQuestions.html" class="btn btn-default" type="button"><i class="fa fa-chevron-left"></i> Back </a>
+      <a href="creditCheck.html" class="btn btn-primary" type="submit">Next <i class="fa fa-chevron-right"></i></a>
+    </div>
   </div>
   <!-- /.container -->
 

@@ -10,6 +10,10 @@ body {
   margin-bottom: 0;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 .btn-link {
   outline: none !important;
 }
