@@ -21,3 +21,9 @@ p:last-child {
 .btn-link {
   outline: none !important;
 }
+
+hr.border {
+  border-width: 2px;
+  border-color: green;
+  margin: 25px 15px;
+}
