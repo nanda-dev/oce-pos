@@ -13,32 +13,28 @@
 	<link href="css/styles.css" rel="stylesheet">
 
 	<style>
-
 		/* Write custom styles here*/
-		
-		
-		
-		.verification strong{
+
+		.verification strong {
 			font-size: initial;
 		}
-		
+
 		.expiration-date .field {
 			float: left;
 			width: 90px;
 			margin-right: 20px;
 		}
-		
+
 		.expiration-date .no-exp {
 			display: inline-block;
 			margin-top: 6px;
 		}
-		
-		
-		.border{
+
+
+		.border {
 			border-width: 2px;
-            border-color: green;
+			border-color: green;
 		}
-			
 	</style>
 </head>
 
@@ -68,40 +64,40 @@
 	</nav>
 
 	<div class="container main-content">
-	
+
 		<div class="panel panel-primary cust-panel">
 			<div class="panel-heading">
 				<h3 class="panel-title">Customer Assistance</h3>
 			</div>
 			<div class="panel-body verification">
-						
-						<strong class="text-primary">Customer Verification</strong>
-						<br><br>
-						<div>Account Holder: JOHN DOE</div><br>
-						
-						
-						<form class="form-horizontal">
-						<div class="form-group">
-							<label for="inputEmail3" class="col-sm-5 col-md-4 col-lg-3 control-label">Method of Authentication:</label>
+
+				<strong class="text-primary">Customer Verification</strong>
+				<br><br>
+				<div>Account Holder: JOHN DOE</div><br>
+
+
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-5 col-md-4 col-lg-3 control-label">Method of Authentication:</label>
 						<div class="col-sm-6 col-md-3 custom-radio">
-						<label class="radio-inline">
+							<label class="radio-inline">
 						<input type="radio" value="option1" name="optradio">Passcode
 						</label>
-						<label class="radio-inline">
+							<label class="radio-inline">
 						<input type="radio" value="option2" name="optradio">Photo ID
 						</label>
 						</div>
-						</div>
-						<div class="form-group">
+					</div>
+					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-5 col-md-4 col-lg-3 control-label" for="inputPassword3">Passcode:</label>
 						<div class="col-sm-6 col-md-3">
-						<input type="password" class="form-control" id="inputPassword3">
+							<input type="password" class="form-control" id="inputPassword3">
 						</div>
-						</div>
-						<div class="form-group">
+					</div>
+					<div class="form-group">
 						<label for="inputPassword13" class="col-sm-5 col-md-4 col-lg-3 control-label" for="searchByname">Photo ID Type:</label>
 						<div class="col-sm-6 col-md-3">
-						<select class="form-control" id="inputPassword13">
+							<select class="form-control" id="inputPassword13">
 								<option>Driver’s License</option>
 								<option>Passport</option>
 								<option>IFE/INE</option>
@@ -112,12 +108,12 @@
 								<option>Renewal of Contract</option>
 							</select>
 						</div>
-						</div>
-						
-						<div class="form-group">
+					</div>
+
+					<div class="form-group">
 						<div class="col-sm-offset-3 col-sm-6 expiration-date">
-						<div class="field">
-						<select class="form-control" id="searchBymonth">
+							<div class="field">
+								<select class="form-control" id="searchBymonth">
 								<option>-mm-</option>
 								<option>01</option>
 								<option>02</option>
@@ -132,32 +128,32 @@
 								<option>11</option>
 								<option>12</option>
 							</select>
-						</div>
-						<div class="field">
-						<input type="text" class="form-control" placeholder="yyyy">
-						</div>
-						
-						<div class="no-exp">
+							</div>
+							<div class="field">
+								<input type="text" class="form-control" placeholder="yyyy">
+							</div>
+
+							<div class="no-exp">
 								<label>
 								  <input type="checkbox"> No expiration date
 								</label>
-							  </div>
-						
-						
+							</div>
+
+
 						</div>
-						</div>
-						<hr class="border">
-						
-						
-						<strong class="text-primary">Quick Action</strong>
-						<br>
-						<br/>
-						<div class="form-group">
+					</div>
+					<hr class="border">
+
+
+					<strong class="text-primary">Quick Action</strong>
+					<br>
+					<br/>
+					<div class="form-group">
 						<label for="input" class="col-sm-5 col-md-4 col-lg-3 control-label">Where do you want to go first? </label>
 						<div class="col-sm-6 col-md-3">
-						
-						
-						<select class="form-control" id="input">
+
+
+							<select class="form-control" id="input">
 							<option>Customer Summary</option>
 							<option>SIM/IMEI</option>
 							<option>Pay Bill</option>
@@ -167,11 +163,11 @@
 							<option>View Bill</option>
 							<option>Renewal of Contract</option>
 						</select>
-					</div>
 						</div>
-				
+					</div>
 
-						</form>
+
+				</form>
 
 			</div>
 		</div>
@@ -179,7 +175,7 @@
 		<div class="text-right">
 			<a type="button" class="btn btn-default" role="button" href="dashboard.html">Cancel</a>
 			<a type="button" class="btn btn-info" role="button" href="searchResults.html"><i class="fa fa-chevron-left"></i> Back</a>
-			<a type="button" class="btn btn-primary" role="button">Next <i class="fa fa-chevron-right"></i></a>
+			<a type="button" class="btn btn-primary" role="button" href="customerSummary.html">Next <i class="fa fa-chevron-right"></i></a>
 		</div>
 	</div>
 
