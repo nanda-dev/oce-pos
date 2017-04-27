@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Omni Channel Experience Lab</title>
+
+  <!-- Bootstrap -->
+  <link href="css/libs/bootstrap.min.css" rel="stylesheet">
+  <link href="css/libs/font-awesome.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <style>
+	.notify input{
+		margin-bottom:15px;
+	}
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="index.html">Omni Channel Experience Lab</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart (0)</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container main-content ">
+
+    <!-- Write your code here  -->
+	<div class="panel panel-primary cust-panel">
+			<div class="panel-heading">
+				<h3 class="panel-title">Notification Method</h3>
+			</div>
+			<div class="panel-body notification">
+			     <form class="form-horizontal">
+				        <div class="form-group">
+						<div class="col-sm-12 col-md-2">
+						<label for="navigationType" class="control-label">Notification Type:</label>
+						</div>
+						<div class="col-xs-6 col-sm-3 col-md-1">
+						<label class="checkbox-inline">
+						<input type="checkbox" value="option1" name="optradio">Email
+						</label>
+                        </div>
+						<div class=" col-xs-6 col-sm-3 col-md-1">
+						<label class="checkbox-inline">
+						<input type="checkbox" value="option2" name="optradio">SMS
+						</label>
+						</div>
+						</div>
+						<div class="form-group notify">
+                         
+						   <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">	
+						     <input type="text" class="form-control" data-toggle="tooltip" title="*Notification Email" id="notificationEmail" placeholder="jane.doe@example.com">
+						    </div>						   
+							
+						   <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
+						     <input type="text" class="form-control" data-toggle="tooltip" title="*Notification Mobile Number" id="notificationMobileNumber" placeholder="588888888">
+							 <p class="text-danger">Please inform the customer that sending SMS messages through Non- AT&T carriers may incur carrier charges</p>
+						   </div>
+						
+					   </div>
+					   
+				 </form>
+			</div>
+	</div>	
+
+  </div>
+  <!-- /.container -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+</body>
+
+</html>
