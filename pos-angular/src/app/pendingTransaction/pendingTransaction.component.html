@@ -1,0 +1,30 @@
+<div class="container main-content">
+  <h3>Pending Transactions</h3>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Transaction Id</th>
+        <th>Item Name</th>
+        <th>Stage</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>456789</td>
+        <td>Headset</td>
+        <td>Cart</td>
+        <td><button class="btn btn-primary" [routerLink]="['/dashboard/cart']">Continue</button></td>
+      </tr>
+      <tr>
+        <td>456789</td>
+        <td>Iphone Activation</td>
+        <td>Service Selection</td>
+        <td><button class="btn btn-primary" [routerLink]="['/dashboard/serviceDevice']">Continue</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-right">
+    <a class="btn btn-default" type="button" [routerLink]="['/dashboard']"> Cancel </a>
+  </div>
+</div>

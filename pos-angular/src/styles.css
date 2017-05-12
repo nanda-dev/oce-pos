@@ -1,0 +1,29 @@
+body {
+  padding-top: 50px;
+}
+
+.main-content {
+  padding: 15px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.btn-link {
+  outline: none !important;
+}
+
+hr.border {
+  border-width: 2px;
+  border-color: green;
+  margin: 25px 15px;
+}

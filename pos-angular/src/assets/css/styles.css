@@ -1,0 +1,61 @@
+body {
+    padding-top: 50px;
+}
+
+.main-content {
+    padding: 15px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.btn-link {
+    outline: none !important;
+}
+
+hr.border {
+    border-width: 2px;
+    border-color: green;
+    margin: 25px 15px;
+}
+
+.cart .popover {
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+    border: 0;
+    background-color: #ffffff;
+    width: 114px;
+}
+
+.cart .popover.bottom {
+    margin-top: -9px;
+}
+
+.cart .glyphicon {
+    width: 24px;
+    font-size: 24px;
+    padding: 0;
+}
+
+.cart .glyphicon-pencil {
+    color: #858e97;
+    margin: 7px 12px 7px 10px;
+}
+
+.cart .glyphicon-remove {
+    color: #f06953;
+    margin-right: 10px;
+}

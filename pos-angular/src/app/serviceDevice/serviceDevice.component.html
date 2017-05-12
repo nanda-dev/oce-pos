@@ -1,0 +1,151 @@
+<div class="container main-content" *ngIf="!selectPlan">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">New Activation - Service & Device</h3>
+    </div>
+    <div class="panel-body">
+      <p>
+        <strong class="text-primary">Account Type:</strong>
+        <span>Residential Post Paid</span>
+      </p>
+      <p>
+        <strong class="text-primary">Number of Lines:</strong>
+        <span>3</span>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="panel panel-primary mobile-panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">Select Mobile Number</h3>
+    </div>
+    <div class="panel-body">
+      <form>
+        <div class="underline">
+          <span>1. Does the customer want to port-in a number? * </span>
+          <label class="radio-inline">
+							<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+						</label>
+          <label class="radio-inline">
+							<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+						</label>
+        </div>
+        <div class="underline">
+          <div class="row">
+            <div class="col-md-2 col-xs-3">
+              <div class="radio">Mobile Number Type:</div>
+            </div>
+            <div class="col-md-3 col-xs-8">
+              <div class="radio">
+                <label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											Display Available CPP Numbers
+										</label>
+              </div>
+              <div class="radio">
+                <label>
+											<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+											Display Available MPP Numbers
+										</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="underline">
+          <div class="form-group clearfix">
+            <label>2. Choose Available Number *</label>
+            <div class="col-xs-6 col-md-5 col-lg-5">
+              <select class="form-control" id="searchById">
+                  <option>(xxx) xxx-xxxx</option>
+                  <option>4363474774</option>
+                  <option>4363474775</option>
+                  <option>4363474776</option>
+				  				<option>4363474777</option>
+              	</select>
+            </div>
+          </div>
+          <div class="form-group clearfix">
+            <div class="col-md-5 col-lg-5">
+              <button type="submit" class="btn btn-primary">Reserve Number</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <strong class="text-primary" style="font-size: initial">Device Information</strong>
+          <div class="form-group">
+            <div class="radio">
+              <label>
+									<input type="radio" name="optradio" id="optradio" value=""> Purchase from AT&T
+  							</label>
+            </div>
+            <div class="col-xs-6 col-md-5 col-lg-5">
+              <select class="form-control" id="searchById">
+									<option>-Select One-</option>
+									<option>iPhone 6s</option>
+									<option>Samsung s4</option>                  
+								</select>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div class="radio">
+            <label>
+									<input type="radio" name="optradio1" id="optradio1" value=""> Bring Your Own Device
+  							</label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div class="text-right">
+    <a type="button" class="btn btn-default" role="button" [routerLink]="['/dashboard']">Cancel</a>
+    <a type="button" class="btn btn-primary" role="button" (click)="selectPlan = true">Next <i class="fa fa-chevron-right"></i></a>
+  </div>
+</div>
+
+<div class="container main-content" *ngIf="!!selectPlan">
+  <div class="panel panel-primary plan-panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">Select Plan &amp; Features for (xx) xxxx-xxxx</h3>
+    </div>
+    <div class="panel-body">
+      <strong class="text-primary" style="font-size: initial">Add New Plan</strong>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="searchById" class="col-sm-2 control-label">Plan Type</label>
+          <div class="col-sm-6 col-md-4">
+            <select class="form-control" id="searchById">
+                  <option>-Select One-</option>
+                  <option selected>Plan 1</option>
+                  <option>Plan 2</option>
+                  <option>Plan 3</option>
+				  				<option>Plan 4</option>
+              </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="searchById1" class="col-sm-2 control-label">Plan Selection</label>
+          <div class="col-sm-6 col-md-4">
+            <select class="form-control" id="searchById1">
+                  <option>-Select One-</option>
+                  <option selected>3GB $ 360/Month</option>
+                  <option>4GB $ 450/Month</option>
+                  <option>5GB $ 500/Month</option>
+				  				<option>6GB $ 600/Month</option>
+              </select>
+          </div>
+          <div class="col-sm-4">
+            <button type="submit" class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <div class="text-right">
+    <a class="btn btn-default" type="button" (click)="selectPlan = false"><i class="fa fa-chevron-left"></i> Back </a>
+    <a class="btn btn-primary" type="submit" [routerLink]="['/dashboard/cart']">Continue <i class="fa fa-chevron-right" ></i></a>
+  </div>

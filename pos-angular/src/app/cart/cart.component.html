@@ -1,0 +1,53 @@
+<div class="container main-content cart">
+
+  <div class="col-md-5 col-sm-12 text-center">
+    <div class="bigcart">
+      <img src="../../assets/images/1493131664_cart.png">
+    </div>
+    <h1>Your shopping cart</h1>
+    <!--<p>
+					This is a free and <b><a href="http://tutorialzine.com/2014/04/responsive-shopping-cart-layout-twitter-bootstrap-3/" title="Read the article!">responsive shopping cart layout, made by Tutorialzine</a></b>. It looks nice on both desktop and mobile browsers. Try it by resizing your window (or opening it on your smartphone and pc).
+				</p>-->
+  </div>
+
+  <div class="col-md-7 col-sm-12">
+    <ul>
+      <li class="row list-inline columnCaptions">
+        <span>QTY</span>
+        <span>ITEM</span>
+        <span>Price</span>
+      </li>
+      <li class="row">
+        <span class="quantity">1</span>
+        <span class="itemName">iPhone 7s 128 GB Black</span>
+        <span class="popbtn" [popover]="popTemplate"><a class="arrow"></a></span>
+        <span class="price">$699.95</span>
+      </li>
+      <li class="row">
+        <span class="quantity">1</span>
+        <span class="itemName">Bluetooth Headset</span>
+        <span class="popbtn" [popover]="popTemplate"><a class="arrow"></a></span>
+        <span class="price">$55.00</span>
+      </li>
+      <li class="row">
+        <span class="quantity">1</span>
+        <span class="itemName">iPhone Silver Pouch</span>
+        <span class="popbtn" [popover]="popTemplate"><a class="arrow"></a></span>
+        <span class="price">$19.99</span>
+      </li>
+      <li class="row totals">
+        <span class="itemName">Total:</span>
+        <span class="price">$1694.43</span>
+        <span class="order"><a type="button" class="btn btn-info" [routerLink]="['/dashboard/payment']">ORDER <i class="fa fa-caret-right"></i></a></span>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+<!-- Cart left Hand Side  ...End ...-->
+
+<ng-template #popTemplate>
+  <div [innerHtml]="html"></div>
+</ng-template>

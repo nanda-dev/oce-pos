@@ -1,0 +1,669 @@
+<div class="container main-content" *ngIf="!creditQuestions && !creditCheck && !uploadDocs">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">New Activation – Customer Information</h3>
+    </div>
+    <div class="panel-body">
+      <div class="text-right"><b><font color="red">*</font>Required Fields</b></div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Customer Type<font color="red">*</font></label>
+          <select class="form-control">
+				<option>Resedential</option>
+				<option>2</option>
+			</select>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Customer Sub Type<font color="red">*</font></label>
+          <select class="form-control">
+				<option>Select One</option>
+				<option>2</option>
+			</select>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Category<font color="red">*</font></label>
+          <select class="form-control">
+				<option>Select One</option>
+				<option>2</option>
+			</select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  2nd pannel-->
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Account Holder's Personal Information</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>First Name<font color="red">*</font></label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Middle Name</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Last Name<font color="red">*</font></label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>DOB<font color="red">*</font></label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Gender<font color="red">*</font></label>
+          <select class="form-control">
+				<option>Male</option>
+				<option>Female</option>
+				<option>Other</option>
+				</select>
+        </div>
+      </div>
+      <hr style="border-width: 2px;border-color: green;">
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Employer Name</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Monthly Income Range<font color="red">*</font></label>
+          <select class="form-control">
+					</select>
+        </div>
+      </div>
+      <hr style="border-width: 2px;border-color: green;">
+      <div>
+        <label class="text-primary">Identification</label>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Is the customer a resident/citizen of Mexico?<font color="red">*</font></label>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label class="radio-inline"><input type="radio" name="iscustomercitizenship">Yes</label>
+          <label class="radio-inline"><input type="radio" name="iscustomercitizenship">No</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Proof of Id<font color="red">*</font></label>
+          <select class="form-control">
+						<option>Select One</option>
+					</select>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Identification Number<font color="red">*</font></label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>RFC<font color="red">*</font></label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>RFC Validation<font color="red">*</font></label>
+          <select class="form-control">
+						<option>Select One</option>
+					</select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>CURP ID #<font color="red">*</font></label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>CURP Validation<font color="red">*</font></label>
+          <select class="form-control">
+						<option>Select One</option>
+					</select>
+        </div>
+      </div>
+      <div>
+        <label class="text-primary">Category Identification:</label>
+        <span>Army</span>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Identification Number:<font color="red">*</font></label>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 3rd pannel -->
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Contact Information</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Preferred Contact Number<font color="red">*</font></label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Preferred Email<font color="red">*</font></label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label>Preferred method of contact:<font color="red">*</font></label>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6 col-md-4">
+          <label class="radio-inline"><input type="radio" name="Preferredmethod">Contact Number</label>
+          <label class="radio-inline"><input type="radio" name="Preferredmethod">Email</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Customer Address</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="form-group col-md-4">
+          <label for="name">Proof Of Address</label>
+          <select class="form-control" id="name">
+          <option>-select one-</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="code">Postal code</label>
+          <input type="text" class="form-control" id="code" placeholder="28879">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="name">Neighborhood</label>
+          <select class="form-control" id="name">
+          <option>Col.Del.Pacifico</option>
+          <option>-select one-</option>
+          </select>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="form-group col-md-4">
+          <label for="street">Street</label>
+          <input type="text" class="form-control" id="street">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="external">External</label>
+          <input type="text" class="form-control" id="external">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="internal">Internal</label>
+          <input type="text" class="form-control" id="internal">
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group col-md-6">
+          <label for="addr">Address Line 2</label>
+          <input type="text" class="form-control" id="addr">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6">
+          <label class="text-primary">Municipality:</label>
+          <span>Benito Juarez</span>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+          <label class="text-primary">City:</label>
+          <span>Manzanillo</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6">
+          <label class="text-primary">State:</label>
+          <span>COLIMA</span>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+          <label class="text-primary">Country:</label>
+          <span>MEXICO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Billing Address</h3>
+    </div>
+    <div class="panel-body">
+      <div class="checkbox">
+        <label>
+      <input type="checkbox"> Check here if billing address is different than customer address
+    </label>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-4">
+          <label for="code">Postal code</label>
+          <input type="text" class="form-control" id="code">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="name">Neighborhood</label>
+          <select class="form-control" id="name">
+						<option>-select one-</option>
+						</select>
+        </div>
+
+        <div class="clearfix"></div>
+
+
+        <div class="form-group col-md-4">
+          <label for="street">Street</label>
+          <input type="text" class="form-control" id="street">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="external">External</label>
+          <input type="text" class="form-control" id="external">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="internal">Internal</label>
+          <input type="text" class="form-control" id="internal">
+        </div>
+
+
+        <div class="clearfix"></div>
+
+
+        <div class="form-group col-md-6">
+          <label for="addr">Address Line</label>
+          <input type="text" class="form-control" id="addr">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6">
+          <label class="text-primary">Municipality:</label>
+          <span>Benito Juarez</span>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+          <label class="text-primary">City:</label>
+          <span>Manzanillo</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6">
+          <label class="text-primary">State:</label>
+          <span>COLIMA</span>
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+          <label class="text-primary">Country:</label>
+          <span>MEXICO</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="panel panel-primary acc-panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">Account options</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="form-group col-md-4">
+          <label for="passcode">Account Passcode</label>
+          <input type="text" class="form-control" id="passcode">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="passcode1">Re-enter account passcode</label>
+          <input type="text" class="form-control" id="passcode1">
+        </div>
+        <div class="clearfix"></div>
+        <h6 class="account" style="padding-left: 20px;">A Passcode is used to enhance the security on an account. It will be used toauthenticate the customer. Passcode must
+          be 6 to 10 digits.</h6>
+        <hr class="border">
+        <p class="text-primary">Please ask the customer the following Question:</p>
+        <div class="form-group clearfix">
+          <div class="col-md-6">
+            <label>1. Does the customer Opt-in to receive promotions and offers?</label>
+          </div>
+          <div class="col-md-6 custom-radio">
+            <label>
+							<input type="radio" value="yes" name="optradio">
+							Yes
+							</label>
+            <label>
+							<input type="radio" value="no" name="optradio">
+							No
+							</label>
+          </div>
+        </div>
+        <div class="form-group clearfix">
+          <div class="col-md-6">
+            <label>2. Will the customer agree to share personal information with third parties?</label>
+          </div>
+          <div class="col-md-6 custom-radio">
+            <label>
+							<input type="radio" value="yes" name="optradio1">
+							Yes
+							</label>
+            <label>
+							<input type="radio" value="no" name="optradio1">
+							No
+							</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-right">
+    <a type="button" class="btn btn-default" role="button" [routerLink]="['/dashboard']">Cancel</a>
+    <a type="button" class="btn btn-primary" role="button" (click)="creditQuestions = true">Next <i class="fa fa-chevron-right"></i></a>
+  </div>
+</div>
+
+<div class="container main-content" *ngIf="!!creditQuestions">
+  <div class="validation-error hidden">Please answer all of the questions before continuing.</div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Credit Questions</h3>
+    </div>
+    <div class="panel-body">
+      <form class="form-inline">
+        <p class="text-info">Ask the customer this series of questions so credit eligibility can be verified:</p>
+        <div class="question">
+          <p>1. Today being
+            <current date dd/mm/yyyy> do you authorize ‘COMUNICACIONES NewCo DE MEXICO S.A. DE C.V.’ (NewCo company name) to consult your credit history
+              for just this time before the ‘Sociedades de Informacion Crediticia’ that deem convenient, declaring that you
+              know the nature, reach and use that ‘COMUNICACIONES NewCo DE MEXICO S.A. DE C.V.’ will have with such information??</p>
+          <label class="radio-inline">
+              <input type="radio" name="question1" value="yes"> Yes
+            </label>
+          <label class="radio-inline">
+              <input type="radio" name="question1" value="no"> No
+            </label>
+
+        </div>
+
+        <div class="question">
+          <p>2. Will you provide an authorization signature?</p>
+          <label class="radio-inline">
+              <input type="radio" name="question2" value="yes"> Yes
+            </label>
+          <label class="radio-inline">
+              <input type="radio" name="question2" value="no"> No
+            </label>
+        </div>
+
+        <div class="question">
+          <p>3. Do you have a credit card?</p>
+
+          <label class="radio-inline">
+                <input type="radio" name="question3" value="yes" checked> Yes
+              </label>
+          <label class="radio-inline">
+                <input type="radio" name="question3" value="no"> No
+              </label>
+          <br>
+          <div class="form-group">
+            <label for="exampleInputName2">Last 4 digits of credit card *</label>
+            <input type="text" class="form-control card-number" id="exampleInputName2" placeholder="----" maxlength="4">
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4. Do you have a mortgage?</p>
+          <label class="radio-inline">
+              <input type="radio" name="question4" value="yes"> Yes
+            </label>
+          <label class="radio-inline">
+              <input type="radio" name="question4" value="no"> No
+            </label>
+        </div>
+
+        <div class="question">
+          <p>5. Do/Did you have a car loan in the past 24 months?</p>
+          <label class="radio-inline">
+              <input type="radio" name="question5" value="yes"> Yes
+            </label>
+          <label class="radio-inline">
+              <input type="radio" name="question5" value="no"> No
+            </label>
+        </div>
+
+        <div class="error-msg hidden">
+          <strong>Consent is required to proceed. You will not be able to continue…..</strong>
+          <strong>Authorization is required to proceed. You will not be able to continue…..</strong>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="clearfix text-right">
+    <a class="btn btn-default" type="button" (click)="creditQuestions = false; creditCheck = false; uploadDocs = false"><i class="fa fa-chevron-left"></i> Back </a>
+    <a class="btn btn-primary" type="submit" (click)="creditQuestions = false; creditCheck = false; uploadDocs = true">Next <i class="fa fa-chevron-right"></i></a>
+  </div>
+</div>
+
+<div class="container main-content " *ngIf="!!uploadDocs">
+  <div class="text-right mb-10">
+    <i class="fa fa-asterisk necessary-doc" aria-hidden="true"></i> - Necessary document &nbsp;
+    <i class="fa fa-dot-circle-o recommended-doc" aria-hidden="true"></i> - Recommended document
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Upload Documents</h3>
+    </div>
+    <input id="file-input" type="file" class="hidden" />
+    <table class="table upload-docs-table table-striped table-hover">
+      <thead>
+        <tr>
+          <th width="10%"> </th>
+          <th width="50%">Document Type</th>
+          <th width="10%" colspan="2" class="text-center">Actions</th>
+          <th width="30%" class="text-center">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-center"></td>
+          <td>01 Contract</td>
+          <td></td>
+          <td>
+            <button class="btn btn-link"><i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();" ></i></button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <i class="fa fa-dot-circle-o recommended-doc" aria-hidden="true"></i>
+          </td>
+          <td>02 Customer ID</td>
+          <td></td>
+          <td>
+            <button class="btn btn-link"><i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i></button>
+          </td>
+          <td>
+            <div class="upload-success"><i class="fa fa-check-square" aria-hidden="true"></i> Uploaded</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <i class="fa fa-dot-circle-o recommended-doc" aria-hidden="true"></i>
+          </td>
+          <td>03 Address Proof
+            <div class="address-proof-list">
+              <select class="form-control" id="searchById">
+                  <option>Passport</option>
+                </select>
+            </div>
+          </td>
+          <td></td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td>
+            <div class="upload-fail"><i class="fa fa-window-close" aria-hidden="true"></i> Capture/upload failed. Please retry.</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <i class="fa fa-dot-circle-o recommended-doc" aria-hidden="true"></i>
+          </td>
+          <td>04 Authenticity Form</td>
+          <td></td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="text-center"></td>
+          <td>05 CC Recurring Charge Consent</td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-print" aria-hidden="true"></i>
+              </button>
+          </td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="text-center"></td>
+          <td>06 Income Proof</td>
+          <td></td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="text-center"></td>
+          <td>07 Payment Receipt</td>
+          <td></td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="text-center"></td>
+          <td>08 Change of Ownership Form</td>
+          <td></td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <i class="fa fa-asterisk necessary-doc" aria-hidden="true"></i>
+          </td>
+          <td>09 Bureau Consent</td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-print" aria-hidden="true"></i>
+              </button>
+          </td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="text-center"></td>
+          <td>10 Portability Format &amp; Cancellation Proof (2 docs)</td>
+          <td></td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <i class="fa fa-dot-circle-o recommended-doc" aria-hidden="true"></i>
+          </td>
+          <td>11 Sub-identification Proof -
+            <div class="category-type"></div>
+          </td>
+          <td></td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="text-center"></td>
+          <td>12 RFC</td>
+          <td></td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="text-center"></td>
+          <td>13 CURP</td>
+          <td></td>
+          <td>
+            <button class="btn btn-link">
+                <i class="fa fa-camera" aria-hidden="true" onclick="document.getElementById('file-input').click();"></i>
+              </button>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="clearfix text-right">
+    <a class="btn btn-default" type="button" (click)="creditQuestions = true; creditCheck = false; uploadDocs = false"><i class="fa fa-chevron-left"></i> Back </a>
+    <a class="btn btn-primary" type="submit" (click)="creditQuestions = false; creditCheck = true; uploadDocs = false">Next <i class="fa fa-chevron-right" ></i></a>
+  </div>
+</div>
+
+<div class="container main-content" *ngIf="!!creditCheck">
+  <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Credit Check</h3>
+      </div>
+      <div class="panel-body">
+        <div class="credit-icon text-info">
+          <i class="fa fa-exclamation-circle"></i>
+        </div>
+        <div class="credit-check">
+          <strong class="text-info">Credit results cannot be determined at this time.</strong>
+          <p class="hidden">The credit check is pending additional information.</p>
+          <p>To determine what action is required, please check the Order Actions page.</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="clearfix text-right">
+      <a class="btn btn-default" type="button" (click)="creditQuestions = false; creditCheck = false; uploadDocs = true"><i class="fa fa-chevron-left"></i> Back </a>
+      <button class="btn btn-primary" type="button"> Order Actions </button>
+      <a class="btn btn-primary" type="button" [routerLink]="['/dashboard/serviceDevice']"> Done </a>
+    </div>
+  </div>
+</div>

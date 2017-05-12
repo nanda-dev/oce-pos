@@ -1,0 +1,166 @@
+<div class="container main-content" *ngIf="!customerAssistance">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Search Results</h3>
+    </div>
+    <div class="panel-body">
+
+      <ul class="list-group search-list">
+
+        <li class="list-group-item clickable" [ngClass]="{'selected': selectedItem=='item1'}" (click)="selectedItem='item1';">
+          <div class="pull-left">
+            <input type="radio" name="selectedItem" [(ngModel)]="selectedItem" value="item1">
+          </div>
+          <div class="pad">
+            <strong class="text-primary">John Doe</strong>
+            <div>(52) 555-5555 <br> AVE INSURGENTES NO.1234 <br> COL. DEL PACIFICO, <br> C.P. 28879 MANZANILLO, COL, MEXICO</div>
+            <div>Status: Active</div>
+          </div>
+        </li>
+
+        <li class="list-group-item clickable" [ngClass]="{'selected': selectedItem=='item2'}" (click)="selectedItem='item2';">
+          <div class="pull-left">
+            <input type="radio" name="selectedItem" [(ngModel)]="selectedItem" value="item2">
+          </div>
+          <div class="pad">
+            <strong class="text-primary">John Doe</strong>
+            <div>(52) 555-5555 <br> AVE INSURGENTES NO.1234 <br> COL. DEL PACIFICO, <br> C.P. 28879 MANZANILLO, COL, MEXICO</div>
+            <div>Status: Active</div>
+          </div>
+        </li>
+
+        <li class="list-group-item clickable" [ngClass]="{'selected': selectedItem=='item3'}" (click)="selectedItem='item3';">
+          <div class="pull-left">
+            <input type="radio" name="selectedItem" [(ngModel)]="selectedItem" value="item3">
+          </div>
+          <div class="pad">
+            <strong class="text-primary">John Doe</strong>
+            <div>(52) 555-5555 <br> AVE INSURGENTES NO.1234 <br> COL. DEL PACIFICO, <br> C.P. 28879 MANZANILLO, COL, MEXICO</div>
+            <div>Status: Active</div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="text-right">
+    <a type="button" class="btn btn-default" role="button" [routerLink]="['/dashboard']">Cancel</a>
+    <a type="button" class="btn btn-primary" role="button" (click)="customerAssistance = true">Next <i class="fa fa-chevron-right"></i></a>
+  </div>
+</div>
+
+<div class="container main-content" *ngIf="!!customerAssistance">
+  <div class="panel panel-primary cust-panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">Customer Assistance</h3>
+    </div>
+    <div class="panel-body verification">
+
+      <strong class="text-primary">Customer Verification</strong>
+      <br><br>
+      <div>Account Holder: JOHN DOE</div><br>
+
+
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-5 col-md-4 col-lg-3 control-label">Method of Authentication:</label>
+          <div class="col-sm-6 col-md-3 custom-radio">
+            <label class="radio-inline">
+						<input type="radio" value="option1" name="optradio">Passcode
+						</label>
+            <label class="radio-inline">
+						<input type="radio" value="option2" name="optradio">Photo ID
+						</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-5 col-md-4 col-lg-3 control-label" for="inputPassword3">Passcode:</label>
+          <div class="col-sm-6 col-md-3">
+            <input type="password" class="form-control" id="inputPassword3">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword13" class="col-sm-5 col-md-4 col-lg-3 control-label" for="searchByname">Photo ID Type:</label>
+          <div class="col-sm-6 col-md-3">
+            <select class="form-control" id="inputPassword13">
+								<option>Driver’s License</option>
+								<option>Passport</option>
+								<option>IFE/INE</option>
+								<option>FM2</option>		
+								<option>FM3</option>
+								<option>Add a Line</option>
+								<option>View Bill</option>
+								<option>Renewal of Contract</option>
+							</select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-6 expiration-date">
+            <div class="field">
+              <select class="form-control" id="searchBymonth">
+								<option>-mm-</option>
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>		
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+							</select>
+            </div>
+            <div class="field">
+              <input type="text" class="form-control" placeholder="yyyy">
+            </div>
+
+            <div class="no-exp">
+              <label>
+								  <input type="checkbox"> No expiration date
+								</label>
+            </div>
+
+
+          </div>
+        </div>
+        <hr class="border">
+
+
+        <strong class="text-primary">Quick Action</strong>
+        <br>
+        <br/>
+        <div class="form-group">
+          <label for="input" class="col-sm-5 col-md-4 col-lg-3 control-label">Where do you want to go first? </label>
+          <div class="col-sm-6 col-md-3">
+
+
+            <select class="form-control" id="input">
+							<option>Customer Summary</option>
+							<option>SIM/IMEI</option>
+							<option>Pay Bill</option>
+							<option>Rate Plan Change</option>
+							<option>Feature Change</option>
+							<option>Add a Line</option>
+							<option>View Bill</option>
+							<option>Renewal of Contract</option>
+						</select>
+          </div>
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+
+  <div class="text-right">
+    <a type="button" class="btn btn-default" role="button" [routerLink]="['/dashboard']">Cancel</a>
+    <a type="button" class="btn btn-info" role="button" (click)="customerAssistance = false"><i class="fa fa-chevron-left"></i> Back</a>
+    <a type="button" class="btn btn-primary" role="button" [routerLink]="['/dashboard/serviceDevice']">Next <i class="fa fa-chevron-right"></i></a>
+  </div>
+</div>

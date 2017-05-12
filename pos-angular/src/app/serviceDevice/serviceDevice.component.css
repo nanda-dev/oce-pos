@@ -1,0 +1,15 @@
+.underline {
+  border-bottom: 2px solid #1cbb1c;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.mobile-panel .form-group label {
+  font-weight: normal;
+  display: block;
+}
+
+.plan-panel .form-group label {
+  font-weight: normal;
+  text-align: left;
+}

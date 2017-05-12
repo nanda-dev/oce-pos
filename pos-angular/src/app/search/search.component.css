@@ -1,0 +1,28 @@
+.search-list.list-group li.list-group-item.selected,
+.search-list.list-group li.list-group-item:hover {
+  background-color: #d9edf7;
+}
+
+.pad {
+  padding-left: 27px;
+}
+
+.verification strong {
+  font-size: initial;
+}
+
+.expiration-date .field {
+  float: left;
+  width: 90px;
+  margin-right: 20px;
+}
+
+.expiration-date .no-exp {
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.border {
+  border-width: 2px;
+  border-color: green;
+}
