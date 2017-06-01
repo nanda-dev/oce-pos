@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { PopoverModule } from 'ngx-bootstrap/popover';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -17,8 +18,11 @@ import { PendingTransactionComponent } from './pendingTransaction/pendingTransac
 import { CartComponent } from './cart/cart.component';
 import { PaymentComponent } from './payment/payment.component';
 
+import { ValidationTooltip } from './directives/validationTooltip.directive';
+
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../node_modules/font-awesome/css/font-awesome.css';
+import '../../node_modules/bootstrap/dist/js/bootstrap.js';
 
 const appRoutes: Routes = [
   {
@@ -46,6 +50,7 @@ const appRoutes: Routes = [
     FormsModule,
     ModalModule.forRoot(),
     PopoverModule.forRoot(),
+    TooltipModule.forRoot(),
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
   declarations: [
@@ -59,7 +64,8 @@ const appRoutes: Routes = [
     ServiceDeviceComponent,
     PendingTransactionComponent,
     CartComponent,
-    PaymentComponent
+    PaymentComponent,
+    ValidationTooltip
   ],
   providers: [
     Title

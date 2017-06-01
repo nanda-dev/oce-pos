@@ -9,23 +9,24 @@
           <h3 class="panel-title">Exisitng Customers</h3>
         </div>
         <div class="panel-body">
-          <div class="row">
-            <div class="col-xs-12 col-md-6 form-group">
-              <select class="form-control" id="searchById">
+          <form #dashboardForm="ngForm" (ngSubmit)="search()">
+            <div class="row">
+              <div class="col-xs-12 col-md-6 form-group">
+                <select class="form-control" name="searchBy">
                   <option>Smart Search</option>
                   <option>Mobile Number</option>
                   <option>Account Number</option>
                   <option>Customer Name</option>
                 </select>
+              </div>
+              <div class="col-xs-12 col-md-6 form-group">
+                <input type="text" class="form-control" name="searchText" placeholder="Search for" required [(ngModel)]="searchText" validationTooltip="{{formErrors.searchText}}">
+              </div>
             </div>
-            <div class="col-xs-12 col-md-6 form-group">
-              <input type="text" class="form-control" id="searchForId" placeholder="Search for" required [(ngModel)]="searchText">
+            <div class="text-right">
+              <button class="btn btn-primary" type="submit" (click)="search()" [disabled]="!dashboardForm.form.valid"><i class="fa fa-search"></i> Search</button>
             </div>
-          </div>
-
-          <div class="text-right">
-            <a class="btn btn-primary" role="button" (click)="search()"><i class="fa fa-search"></i> Search</a>
-          </div>
+          </form>
         </div>
       </div>
     </div>

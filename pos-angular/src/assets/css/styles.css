@@ -10,6 +10,10 @@ body {
     cursor: pointer;
 }
 
+.ng-invalid.ng-dirty[ng-reflect-validation-tooltip] {
+    border-color: #a94442;
+}
+
 p:last-child {
     margin-bottom: 0 !important;
 }
