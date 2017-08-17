@@ -7,23 +7,24 @@
           <h3 class="panel-title">User Login</h3>
         </div>
         <div class="panel-body">
-          <form class="form-horizontal">
+          <form class="form-horizontal" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
             <div class="form-group">
               <label for="usernameId" class="col-sm-2 control-label">Username</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="usernameId" placeholder="Enter Username">
+                <input type="text" class="form-control" id="usernameId" [(ngModel)]="model.username" #username="ngModel" name="username" placeholder="Enter Username" required>
+                <div *ngIf="f.submitted && !username.valid" class="text-danger">Username is required</div>
               </div>
             </div>
             <div class="form-group">
               <label for="passwordId" class="col-sm-2 control-label">Password</label>
               <div class="col-sm-10">
-                <input type="password" class="form-control" id="passwordId" placeholder="Enter Password">
+                <input type="password" class="form-control" id="passwordId" [(ngModel)]="model.password" #password="ngModel" name="password" placeholder="Enter Password" required>
+                <div *ngIf="f.submitted && !password.valid" class="text-danger">Password is required</div>
               </div>
             </div>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
-                <!--<button type="submit" class="btn btn-default">Login</button> -->
-                <a class="btn btn-primary" role="button" [routerLink]="['/dashboard']">Login</a>
+                <button class="btn btn-primary" [disabled]="loading">Login</button>
               </div>
             </div>
           </form>
