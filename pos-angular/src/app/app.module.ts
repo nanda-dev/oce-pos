@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -18,7 +19,9 @@ import { PendingTransactionComponent } from './pendingTransaction/pendingTransac
 import { CartComponent } from './cart/cart.component';
 import { PaymentComponent } from './payment/payment.component';
 
-import { ValidationTooltip } from './directives/validationTooltip.directive';
+import { LoginService } from './_services/index';
+
+import { ValidationTooltip } from './_directives/validationTooltip.directive';
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../../node_modules/font-awesome/css/font-awesome.css';
@@ -48,6 +51,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     ModalModule.forRoot(),
     PopoverModule.forRoot(),
     TooltipModule.forRoot(),
@@ -68,7 +72,8 @@ const appRoutes: Routes = [
     ValidationTooltip
   ],
   providers: [
-    Title
+    Title,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
