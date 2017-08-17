@@ -6,7 +6,7 @@ public class LoginDao {
 
 	public static User getLoginUserData(String userName) {
 		User user = new User();
-		System.out.println("Sucessfully connected with database first time!!!!!!!!");
+		System.out.println("Sucessfully connected with database first time!!!!!!!!!");
 		/*MongoClient client = new MongoClient("localhost", 27017);
 		System.out.println("Sucessfully connected with database first time!!!!!!!!");
 		try {
