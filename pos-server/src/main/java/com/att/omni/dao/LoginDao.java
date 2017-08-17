@@ -1,21 +1,13 @@
 package com.att.omni.dao;
 
-import org.bson.Document;
-
 import com.att.omni.model.User;
-import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
-import com.mongodb.MongoClient;
 
 public class LoginDao {
 
 	public static User getLoginUserData(String userName) {
 		User user = new User();
 		System.out.println("Sucessfully connected with database first time!!!!!!!!");
-		MongoClient client = new MongoClient("localhost", 27017);
+		/*MongoClient client = new MongoClient("localhost", 27017);
 		System.out.println("Sucessfully connected with database first time!!!!!!!!");
 		try {
 
@@ -38,7 +30,7 @@ public class LoginDao {
 			e.printStackTrace();
 		} finally {
 			client.close();
-		}
+		}*/
 		return user;
 	}
 
