@@ -1,31 +1,31 @@
-package com.att.cpc.generic.controller;
+/*package com.att.cpc.generic.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
 
 import com.att.cpc.generic.exception.CPCGeneralException;
 
-/**
+*//**
  * This class is used as the generic controller
  * 
  * $Id: Controller.java,v 1.2 2012-03-14 23:42:32 sg0019 Exp $
  * 
  * @author Kerry Fidler
  * 
- */
+ *//*
 
 public class Controller {
 	private static org.apache.commons.logging.Log logger = org.apache.commons.logging.LogFactory
 			.getLog(Controller.class);
 
-	/**
+	*//**
 	 * CPCRequest
 	 * 
 	 * @param cPCRequest
 	 * @return com.att.cpc.service.generic.CPCResponse
 	 * @throws CPCGeneralException 
 	 * @throws SQLException 
-	 */
+	 *//*
 	public static com.att.cpc.generic.om.CPCResponse cPCRequest(com.att.cpc.generic.om.CPCRequest cPCRequest) throws CPCGeneralException, SQLException
 		{
 
@@ -82,3 +82,4 @@ public class Controller {
 		return cpcResponse;
 	}
 }
+*/
