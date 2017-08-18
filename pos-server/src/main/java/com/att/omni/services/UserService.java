@@ -35,8 +35,10 @@ public class UserService implements OmniChannelService {
 		boolean loginFlag = Boolean.FALSE;
 		ResponseModel rsModel = new ResponseModel();
 		System.out.println(omModel.getPayLoad());
-		ObjectMapper mapper = new ObjectMapper();
-		User OrgUser = mapper.readValue(omModel.getPayLoad(), User.class);
+	
+		User OrgUser = new User();
+		OrgUser.setUserName(omModel.getPayLoad().get("userName"));
+		OrgUser.setPasswrd(omModel.getPayLoad().get("userName"));
 		System.out.println(OrgUser);
 		User daoUser = new User();
 		daoUser = LoginDao.getLoginUserData(OrgUser.getUserName());
