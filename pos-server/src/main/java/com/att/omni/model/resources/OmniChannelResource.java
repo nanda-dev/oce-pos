@@ -16,7 +16,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.apache.tomcat.util.codec.binary.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +24,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 
 import com.att.omni.model.OmniChannelModel;
 import com.att.omni.model.ResponseModel;
-import com.att.omni.model.User;
 import com.att.omni.services.OmniChannelService;
-import com.att.omni.util.OmniChannelProperties;
 import com.att.omni.util.OmniChannelUtil;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -45,7 +42,7 @@ public class OmniChannelResource {
 	public Response getById() {
 		List<OmniChannelModel> omModels = new ArrayList<>();
 		OmniChannelModel omModel = new OmniChannelModel();
-		omModel.setPayLoad("{\"userName\": \"test\",\"passwrd\": \"test\"}");
+		//omModel.setPayLoad("{\"userName\": \"test\",\"passwrd\": \"test\"}");
 		omModels.add(omModel);
 		return Response.ok(omModels).build();
 	}
