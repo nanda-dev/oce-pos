@@ -72,7 +72,7 @@ public class OmniChannelResource {
 		System.out.println(clientLogicClass);
 		if(org.springframework.util.StringUtils.isEmpty(clientLogicClass)){
 			rsModel.setResponseBoolean(false);
-			rsModel.setResponseString("service not present");
+			rsModel.setResponseString("service not present !!");
 			return Response.ok(rsModel).build();			
 		}
 		loadOmModel(omModel);
