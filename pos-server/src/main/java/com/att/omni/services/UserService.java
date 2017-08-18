@@ -38,7 +38,7 @@ public class UserService implements OmniChannelService {
 	
 		User OrgUser = new User();
 		OrgUser.setUserName(omModel.getPayLoad().get("userName"));
-		OrgUser.setPasswrd(omModel.getPayLoad().get("userName"));
+		OrgUser.setPasswrd(omModel.getPayLoad().get("passwrd"));
 		System.out.println(OrgUser);
 		User daoUser = new User();
 		daoUser = LoginDao.getLoginUserData(OrgUser.getUserName());
