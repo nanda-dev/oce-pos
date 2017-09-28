@@ -22,7 +22,7 @@ public class CartService implements OmniChannelService{
 		System.out.println("inside service"+userName +" password "+password);
 		boolean loginFlag = Boolean.FALSE;
 		User user = new User();
-		user = logindao.getLoginUserData(userName);
+		//user = logindao.getLoginUserData(userName);
 		System.out.println(user);
 		if(userName.equals(user.getUserName()) && password.equals(user.getPasswrd())){
 			loginFlag = true;

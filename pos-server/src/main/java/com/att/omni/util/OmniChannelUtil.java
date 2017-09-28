@@ -8,10 +8,11 @@ public class OmniChannelUtil {
 	public static Map<String, String> getServicemap(){
 		
 		Map<String,String> serviceMap = new HashMap<String,String>();
-		serviceMap.put("Login", "com.att.omni.services.UserService");
-		serviceMap.put("Logout", "com.att.omni.services.UserService");
-		serviceMap.put("Cart", "com.att.omni.services.CartService");
-		serviceMap.put("CustomerCreation", "com.att.omni.services.UserService");
+		serviceMap.put("Login", "userService");
+		serviceMap.put("Logout", "userService");
+		serviceMap.put("Cart", "CartService");
+		serviceMap.put("CustomerCreationService", "customerCreationService");
+		serviceMap.put("CreditQuestionService", "creditQuestionService");
 		return serviceMap;
 		
 		
