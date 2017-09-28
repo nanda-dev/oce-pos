@@ -8,7 +8,7 @@ public class OmniChannelModel {
 	private String status;
 	private String errorCode;
 	private String errorReason;
-	private Map<String, String> payLoad;
+	private Map<String, Object> payLoad;
 
 	public String getService() {
 		return service;
@@ -42,18 +42,18 @@ public class OmniChannelModel {
 		this.errorReason = errorReason;
 	}
 
-	public Map<String, String> getPayLoad() {
+	@Override
+	public String toString() {
+		return "OmniChannelModel [service=" + service + ", status=" + status + ", errorCode=" + errorCode
+				+ ", errorReason=" + errorReason + ", payLoad=" + payLoad + "]";
+	}
+
+	public Map<String, Object> getPayLoad() {
 		return payLoad;
 	}
 
-	public void setPayLoad(Map<String, String> payLoad) {
+	public void setPayLoad(Map<String, Object> payLoad) {
 		this.payLoad = payLoad;
-	}
-
-	@Override
-	public String toString() {
-		return "OmniChannelModel [service=" + service  + ", status=" + status + ", errorCode=" + errorCode
-				+ ", errorReason=" + errorReason + ", payLoad=" + payLoad + "]";
 	}
 
 }
