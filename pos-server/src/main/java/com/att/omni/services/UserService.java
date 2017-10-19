@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.support.WebApplicationContextUtils;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.att.omni.dao.LoginDao;
 import com.att.omni.model.OmniChannelModel;
@@ -19,7 +18,7 @@ import com.att.omni.model.User;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-@Service("userService")
+@Service("serService")
 public class UserService implements OmniChannelService {
 
 	@Autowired
@@ -77,12 +76,6 @@ public class UserService implements OmniChannelService {
 
 	public void setLoginDao(LoginDao loginDao) {
 		this.loginDao = loginDao;
-	}
-
-	@Override
-	public ResponseModel getResponse(MultipartFile[] files, ServletContext context) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

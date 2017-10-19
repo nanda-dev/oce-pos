@@ -13,7 +13,6 @@ public class OmniChannelUtil {
 		serviceMap.put("Cart", "CartService");
 		serviceMap.put("CustomerCreationService", "customerCreationService");
 		serviceMap.put("CreditQuestionService", "creditQuestionService");
-		serviceMap.put("DocumentsUploadService", "documentsUploadService");
 		return serviceMap;
 		
 		
