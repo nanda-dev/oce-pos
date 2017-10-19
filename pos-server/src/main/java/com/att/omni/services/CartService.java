@@ -6,6 +6,8 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.ServletContext;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import com.att.omni.dao.LoginDao;
 import com.att.omni.model.OmniChannelModel;
 import com.att.omni.model.ResponseModel;
@@ -37,6 +39,13 @@ public class CartService implements OmniChannelService{
 		return null;
 		// TODO Auto-generated method stub
 		
+	}
+
+
+	@Override
+	public ResponseModel getResponse(MultipartFile[] files, ServletContext context) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 

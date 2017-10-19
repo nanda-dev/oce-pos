@@ -1,5 +1,6 @@
 package com.att.omni.util;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.Format;
 import java.text.ParseException;
@@ -12,6 +13,7 @@ import com.att.omni.model.Address;
 import com.att.omni.model.ContactInformation;
 import com.att.omni.model.CreditQuestions;
 import com.att.omni.model.CustomerInformation;
+import com.att.omni.model.DocumentsUpload;
 import com.att.omni.model.Identification;
 import com.att.omni.model.PersonalInformation;
 
@@ -106,6 +108,14 @@ public class NewActivationUtil {
 		creditQuestions.setOwnsCreditCard(mapCreditQuestions.get("ownsCreditCard") == null ? false : Boolean.valueOf(mapCreditQuestions.get("ownsCreditCard").toString()));
 		creditQuestions.setProvideSign(mapCreditQuestions.get("provideSign") == null ? false : Boolean.valueOf(mapCreditQuestions.get("provideSign").toString()));
 		return creditQuestions;
+		
+	}
+	
+	
+	public static DocumentsUpload getDocumentsUploads(Map<Object, Object> mapDocumentsUploads) {
+		DocumentsUpload documentsUpload = new DocumentsUpload();
+		documentsUpload.setAddressProofFile((File) mapDocumentsUploads.get("addressProofFile"));
+		return documentsUpload;
 		
 	}
 

@@ -11,18 +11,12 @@ import javax.servlet.ServletContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
-import com.att.omni.dao.NewActivationDao;
+import com.att.omni.dao.CreditQuestionsDao;
 import com.att.omni.dao.SequenceDao;
-import com.att.omni.model.AccountOptions;
-import com.att.omni.model.Address;
-import com.att.omni.model.ContactInformation;
 import com.att.omni.model.CreditQuestions;
-import com.att.omni.model.CustomerInformation;
-import com.att.omni.model.Identification;
-import com.att.omni.model.NewActivation;
 import com.att.omni.model.OmniChannelModel;
-import com.att.omni.model.PersonalInformation;
 import com.att.omni.model.ResponseModel;
 import com.att.omni.util.NewActivationUtil;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -33,22 +27,19 @@ public class CreditQuestionService implements OmniChannelService {
 
 	@Autowired
 	ServletContext context;
-
-	@Autowired
-	private NewActivation newActivationObj;
-
+	
 	@Autowired
 	private SequenceDao sequenceDao;
 
 	@Autowired
-	private NewActivationDao newActivationDao;
+	private CreditQuestionsDao creditQuestionsDao;
 
 	private static final String HOSTING_SEQ_KEY = "seqId";
 
 	@Override
 	public ResponseModel getResponse(OmniChannelModel omModel, ServletContext context)
 			throws JsonParseException, JsonMappingException, IOException, ParseException {
-		System.out.println("Inside NewActivationService");
+		System.out.println("Inside CreditQuestionService");
 		ResponseModel rsModel = new ResponseModel();
 		System.out.println(omModel.getPayLoad());
 
@@ -59,8 +50,8 @@ public class CreditQuestionService implements OmniChannelService {
 		creditQuestions.setId(sequenceDao.getNextSequenceId(HOSTING_SEQ_KEY));
 		List<CreditQuestions> creditQuestionsList = new ArrayList<CreditQuestions>();
 		creditQuestionsList.add(creditQuestions);
-		newActivationDao.writeCreditQuestions(creditQuestionsList);
-		
+		creditQuestionsDao.writeCreditQuestions(creditQuestionsList);
+
 		return rsModel;
 	}
 
@@ -70,6 +61,12 @@ public class CreditQuestionService implements OmniChannelService {
 
 	public void setContext(ServletContext context) {
 		this.context = context;
+	}
+
+	@Override
+	public ResponseModel getResponse(MultipartFile[] files, ServletContext context) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

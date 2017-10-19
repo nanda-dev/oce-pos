@@ -11,6 +11,7 @@ import javax.servlet.ServletContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.att.omni.dao.NewActivationDao;
 import com.att.omni.dao.SequenceDao;
@@ -125,6 +126,12 @@ public class CustomerCreationService implements OmniChannelService {
 
 	public void setContext(ServletContext context) {
 		this.context = context;
+	}
+
+	@Override
+	public ResponseModel getResponse(MultipartFile[] files, ServletContext context) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
