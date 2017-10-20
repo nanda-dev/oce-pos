@@ -18,4 +18,12 @@ public class ResponseModel {
 	public void setResponseBoolean(boolean responseBoolean) {
 		this.responseBoolean = responseBoolean;
 	}
+	
+	@Override
+	public String toString() {
+		return "ResponseModel [responseString=" + responseString + ", responseBoolean=" + responseBoolean
+				+ ", getResponseString()=" + getResponseString() + ", isResponseBoolean()=" + isResponseBoolean()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
 }

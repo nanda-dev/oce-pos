@@ -171,7 +171,7 @@ public class OmniChannelResource {
 				ApplicationContext appContext = WebApplicationContextUtils.getWebApplicationContext(context);
 				omniChannelService = (OmniChannelService) appContext.getBean(clientLogicClass);
 				rsModel = omniChannelService.getResponse(omModel, context);
-				System.out.println(omniChannelService);
+				System.out.println(rsModel);
 			}
 
 		} catch (JsonMappingException e) {
